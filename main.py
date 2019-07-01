@@ -2,25 +2,28 @@ from search import Search
 
 
 def main():
+    print(50 * "-")
+    print("Carregando sistema...")
     s = Search()
 
     while True:
         print(50 * "-")
-        my_word = str(input("Digite a palavra embaralhada a ser encontrada: "))
-        my_word_len = len(my_word)
+        my_anagram = str(input("Digite a palavra embaralhada a ser encontrada: "))
 
-        if my_word_len == 1:
+        if len(my_anagram) < 3:
             print("Por favor, digite uma palavra com, pelo menos, três letras...")
         else:
-            total_time, anagrams = s.search_anagrams_fixed_len(my_word)
+            total_time, anagrams = s.search_anagrams(my_anagram)
+
             if anagrams:
-                for i in range(len(anagrams)):
-                    print(anagrams[i])
+                for x in range(len(anagrams)):
+                    print(anagrams[x])
                 print("Foram encontrados: {} anagramas".format(len(anagrams)))
             else:
                 print("Não foram encontrados anagramas correspondentes...")
             print("Realizado em {}". format(total_time))
-            break
+
+            # break
 
 
 if __name__ == "__main__":
