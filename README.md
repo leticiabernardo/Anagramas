@@ -15,6 +15,19 @@ aleator   | 0 anagramas | Não foram encontrados anagramas correspondentes...
 
 ------
 
+### Como o algoritmo funciona
+
+O algoritmo é muito simples!<br>
+As palavras <i>marca</i> e <i>carma</i> são anagramas, ordenadas de forma alfabética se tornam iguais:
+
+Palavra   | Chave ordenada
+---------  | ------ 
+marca      | aacmr
+carma      | aacmr 
+
+Ou seja, cria-se um dicionário tratando as palavras que são anagramas pertencendo a mesma chave e na busca por um anagrama, o algoritmo se torna extremamente rápido por procurar apenas pelo seu anagrama ordenado.
+
+
 ### Contribuições
 
 Contribuições são sempre muito bem vindas!
