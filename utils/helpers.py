@@ -3,8 +3,7 @@ def clean_word(string):
     from unicodedata import normalize
 
     ln = string.strip().split(' ')
-    ln = normalize('NFKD', ln[0]).encode('ASCII', 'ignore').decode('ASCII')
-    ln.lower()
+    ln = normalize('NFKD', ln[0]).encode('ASCII', 'ignore').decode('ASCII').lower()
     return ln
 
 
