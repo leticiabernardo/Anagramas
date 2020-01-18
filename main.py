@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from search import Search
 
 
@@ -12,6 +14,9 @@ def main():
 
         if len(my_anagram) < 3:
             print("Por favor, digite uma palavra com, pelo menos, três letras...")
+        elif my_anagram == "exit":
+            print("Adios muchacho!")
+            exit()
         else:
             total_time, anagrams = s.search_anagrams(my_anagram)
 
@@ -22,8 +27,6 @@ def main():
             else:
                 print("Não foram encontrados anagramas correspondentes...")
             print("Realizado em {}". format(total_time))
-
-            # break
 
 
 if __name__ == "__main__":
